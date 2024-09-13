@@ -43,6 +43,9 @@
 #ifndef __DATA_TYPES__
 #define __DATA_TYPES__
 
+namespace PeripheralIO
+{
+
 //*****************************************************************************
 //
 // If building with a C++ compiler, make all of the definitions in this header
@@ -111,5 +114,7 @@ typedef char            	CHAR;
 #ifdef	__cplusplus
 }
 #endif /* __cplusplus */
+
+}
 
 #endif /* __DATA_TYPE__ */

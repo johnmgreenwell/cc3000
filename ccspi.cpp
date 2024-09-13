@@ -48,6 +48,9 @@
 #include "utility/cc3000_common.h"
 #include "utility/debug.h"
 
+namespace PeripheralIO
+{
+
 extern uint8_t g_csPin, g_irqPin, g_vbatPin, g_IRQnum, g_SPIspeed;
 
 #define READ                            (3)
@@ -766,4 +769,6 @@ void cc3k_int_poll()
   if (digitalRead(g_irqPin) == LOW && ccspi_is_in_irq == 0 && ccspi_int_enabled != 0) {
     SPI_IRQ();
   }
+}
+
 }

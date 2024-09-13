@@ -45,6 +45,9 @@
 #include "hci.h"
 #include "socket.h"
 
+namespace PeripheralIO
+{
+
 //*****************************************************************************
 //
 // If building with a C++ compiler, make all of the definitions in this header
@@ -169,6 +172,8 @@ typedef struct _bsd_gethostbyname_return_t
 #ifdef  __cplusplus
 }
 #endif // __cplusplus
+
+}
 
 #endif // __EVENT_HANDLER_H__
 

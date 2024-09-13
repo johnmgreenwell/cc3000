@@ -57,6 +57,9 @@
 #include "evnt_handler.h"
 #include "wlan.h"
 
+namespace PeripheralIO
+{
+
 #define SL_PATCH_PORTION_SIZE		(1000)
 
 
@@ -238,3 +241,5 @@ void hci_patch_send(UINT8 ucOpcode, UINT8 *pucBuff, CHAR *patch, UINT16 usDataLe
 //
 //
 //*****************************************************************************
+
+}

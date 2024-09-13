@@ -31,6 +31,9 @@
 #include "ccspi.h"
 #include "Client.h"
 
+namespace PeripheralIO
+{
+
 #if defined(__arm__) && defined(__SAM3X8E__) // Arduino Due
   #define SPI_CLOCK_DIVIDER 6 // used to set the speed for the SPI bus; 6 == 14 Mhz on the Arduino Due
 #else
@@ -131,7 +134,10 @@ class Adafruit_CC3000_Client : public Client {
 // A forward reference in the server header won't cut it because the server needs to contain
 // instances of the client.  The client definition above can be pulled into a separate
 // header in a later change to make this cleaner.
+}
 #include "Adafruit_CC3000_Server.h"
+namespace PeripheralIO
+{
 
 class Adafruit_CC3000 {
   public:
@@ -192,5 +198,7 @@ class Adafruit_CC3000 {
 };
 
 extern Print* CC3KPrinter;
+
+}
 
 #endif

@@ -64,7 +64,8 @@
 #include "../ccspi.h"
 #include "debug.h"
 
-
+namespace PeripheralIO
+{
 
 //*****************************************************************************
 //                  COMMON DEFINES
@@ -899,3 +900,5 @@ void SimpleLinkWaitData(UINT8 *pBuf, UINT8 *from, UINT8 *fromlen)
 //! @}
 //
 //*****************************************************************************
+
+}

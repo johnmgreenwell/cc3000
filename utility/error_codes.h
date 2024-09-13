@@ -43,6 +43,9 @@
 #ifndef __ERROR_CODES__
 #define __ERROR_CODES__
 
+namespace PeripheralIO
+{
+
 //*****************************************************************************
 //
 // If building with a C++ compiler, make all of the definitions in this header
@@ -138,5 +141,7 @@ extern "C" {
 #ifdef	__cplusplus
 }
 #endif /* __cplusplus */
+
+}
 
 #endif /* __ERROR_CODES__ */

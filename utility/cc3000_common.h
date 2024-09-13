@@ -53,6 +53,9 @@
 #include <errno.h>
 #include <stdint.h>
 
+namespace PeripheralIO
+{
+
 //*****************************************************************************
 //
 // If building with a C++ compiler, make all of the definitions in this header
@@ -182,13 +185,13 @@ typedef INT32 time_t;
 typedef UINT32 clock_t;
 typedef INT32 suseconds_t;
 
-typedef struct timeval timeval;
-
 struct timeval 
 {
     time_t         tv_sec;                  /* seconds */
     suseconds_t    tv_usec;                 /* microseconds */
 };
+
+typedef struct timeval timeval;
 
 typedef CHAR *(*tFWPatches)(UINT32 *usLength);
 
@@ -398,5 +401,7 @@ extern void cc3k_int_poll();
 #ifdef  __cplusplus
 }
 #endif // __cplusplus
+
+}
 
 #endif // __COMMON_H__

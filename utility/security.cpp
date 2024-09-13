@@ -50,6 +50,9 @@
 
 #include "security.h"
 
+namespace PeripheralIO
+{
+
 #ifndef CC3000_UNENCRYPTED_SMART_CONFIG
 // foreward sbox
 const UINT8 sbox[256] =   { 
@@ -536,3 +539,5 @@ INT32 aes_write_key(UINT8 *key)
 //! @}
 //
 //*****************************************************************************
+
+}

@@ -45,6 +45,8 @@
 
 #include "cc3000_common.h"
 
+namespace PeripheralIO
+{
 
 //*****************************************************************************
 //
@@ -252,5 +254,7 @@ extern INT32 nvmem_create_entry(UINT32 file_id, UINT32 newlen);
 #ifdef  __cplusplus
 }
 #endif // __cplusplus
+
+}
 
 #endif // __NVRAM_H__

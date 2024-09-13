@@ -45,6 +45,9 @@
 
 #include "cc3000_common.h"
 
+namespace PeripheralIO
+{
+
 //*****************************************************************************
 //
 // If building with a C++ compiler, make all of the definitions in this header
@@ -336,5 +339,7 @@ extern void hci_patch_send(UINT8 ucOpcode, UINT8 *pucBuff, CHAR *patch, UINT16 u
 #ifdef  __cplusplus
 }
 #endif // __cplusplus
+
+}
 
 #endif // __HCI_H__

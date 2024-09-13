@@ -23,6 +23,9 @@
 
 #include <Arduino.h>
 
+namespace PeripheralIO
+{
+
 #define GCC_VERSION (__GNUC__ * 10000 + __GNUC_MINOR__ * 100 + __GNUC_PATCHLEVEL__)
 #if (GCC_VERSION >= 40702) || !defined(prog_char)
 typedef char PROGMEM prog_char;
@@ -63,5 +66,7 @@ void printDec16(uint16_t h);
 #endif
 
 extern Print* CC3KPrinter;
+
+}
 
 #endif

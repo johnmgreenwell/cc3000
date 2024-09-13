@@ -23,6 +23,9 @@
 
 #include "debug.h"
 
+namespace PeripheralIO
+{
+
 /**************************************************************************/
 /*!
     @brief  This function will display the number of bytes currently free
@@ -121,4 +124,6 @@ void DEBUGPRINT(const prog_char *fstr)
   if(!fstr) return;
   while((c = pgm_read_byte(fstr++)))
     uart_putchar(c);
+}
+
 }

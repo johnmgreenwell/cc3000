@@ -45,6 +45,9 @@
 
 #include "nvmem.h"
 
+namespace PeripheralIO
+{
+
 //*****************************************************************************
 //
 // If building with a C++ compiler, make all of the definitions in this header
@@ -134,5 +137,7 @@ extern INT32 aes_write_key(UINT8 *key);
 #ifdef  __cplusplus
 }
 #endif // __cplusplus
+
+}
 
 #endif

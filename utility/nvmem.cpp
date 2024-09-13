@@ -65,6 +65,9 @@
 #include "evnt_handler.h"
 #include "debug.h"
 
+namespace PeripheralIO
+{
+
 //*****************************************************************************
 //
 // Prototypes for the structures for APIs.
@@ -381,3 +384,4 @@ INT32 nvmem_create_entry(UINT32 ulFileId, UINT32 ulNewLen)
 //
 //*****************************************************************************
 
+}

@@ -48,6 +48,9 @@
 // Noted 12-12-2014 by tdicola
 #include "data_types.h"
 
+namespace PeripheralIO
+{
+
 //*****************************************************************************
 //
 //! \addtogroup socket_api
@@ -111,7 +114,9 @@ extern "C" {
 
 #define  IOCTL_SOCKET_EVENTMASK
 
-#define ENOBUFS                 55          // No buffer space available
+#ifndef ENOBUFS
+#   define ENOBUFS                 55          // No buffer space available
+#endif
 
 #define __FD_SETSIZE            32
 
@@ -720,5 +725,7 @@ extern UINT16 getmssvalue (INT32 sd);
 #ifdef  __cplusplus
 }
 #endif // __cplusplus
+
+}
 
 #endif // __SOCKET_H__

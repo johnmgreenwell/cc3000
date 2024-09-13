@@ -61,6 +61,9 @@
 
 #include "utility/wlan.h"
 
+namespace PeripheralIO
+{
+
 typedef void (*gcSpiHandleRx)(void *p);
 typedef void (*gcSpiHandleTx)(void);
 
@@ -88,6 +91,8 @@ extern char *sendDriverPatch(unsigned long *Length);
 extern char *sendBootLoaderPatch(unsigned long *Length);
 extern char *sendWLFWPatch(unsigned long *Length);
 extern void SPI_IRQ(void);
+
+}
 
 #endif
 

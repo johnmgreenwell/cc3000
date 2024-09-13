@@ -60,6 +60,9 @@
 #include "evnt_handler.h"
 #include "debug.h"
 
+namespace PeripheralIO
+{
+
 volatile sSimplLinkInformation tSLInformation;
 
 #define SMART_CONFIG_PROFILE_SIZE		67		// 67 = 32 (max ssid) + 32 (max key) + 1 (SSID length) + 1 (security type) + 1 (key length)
@@ -1265,3 +1268,5 @@ INT32 wlan_smart_config_process()
 //! @}
 //
 //*****************************************************************************
+
+}

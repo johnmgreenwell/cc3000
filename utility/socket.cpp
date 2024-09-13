@@ -59,7 +59,8 @@
 #include "netapp.h"
 #include "debug.h"
 
-
+namespace PeripheralIO
+{
 
 //Enable this flag if and only if you must comply with BSD socket 
 //close() function
@@ -1555,5 +1556,7 @@ UINT16 getmssvalue (INT32 sd)
 	SimpleLinkWaitEvent(HCI_EVNT_GETMSSVALUE, &ret);
 
 	return ret;
+}
+
 }
 

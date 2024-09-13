@@ -47,6 +47,9 @@
 #include "evnt_handler.h"
 #include "nvmem.h"
 
+namespace PeripheralIO
+{
+
 #define MIN_TIMER_VAL_SECONDS      10
 #define MIN_TIMER_SET(t)    if ((0 != t) && (t < MIN_TIMER_VAL_SECONDS)) \
 							{ \
@@ -463,4 +466,7 @@ INT32 netapp_set_debug_level(UINT32 ulLevel)
 	return(scRet);
 
 }
+
+}
+
 #endif

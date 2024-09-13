@@ -33,6 +33,9 @@
 #include "utility/wlan.h"
 #include "utility/debug.h"
 
+namespace PeripheralIO
+{
+
 uint8_t g_csPin, g_irqPin, g_vbatPin, g_IRQnum, g_SPIspeed;
 
 static const uint8_t dreqinttable[] = {
@@ -1316,7 +1319,7 @@ Adafruit_CC3000_Client Adafruit_CC3000::connectTCP(uint32_t destIP, uint16_t des
 
   //printHex((byte *)&socketAddress, sizeof(socketAddress));
   //if (CC3KPrinter != 0) CC3KPrinter->print(F("Connecting socket ... "));
-  if (-1 == ::connect(tcp_socket, &socketAddress, sizeof(socketAddress)))
+  if (-1 == connect(tcp_socket, &socketAddress, sizeof(socketAddress)))
   {
     CHECK_PRINTER {
       CC3KPrinter->println(F("Connection error"));
@@ -1366,7 +1369,7 @@ Adafruit_CC3000_Client Adafruit_CC3000::connectUDP(uint32_t destIP, uint16_t des
   }
 
   //printHex((byte *)&socketAddress, sizeof(socketAddress));
-  if (-1 == ::connect(udp_socket, &socketAddress, sizeof(socketAddress)))
+  if (-1 == connect(udp_socket, &socketAddress, sizeof(socketAddress)))
   {
     CHECK_PRINTER {
       CC3KPrinter->println(F("Connection error"));
@@ -1473,7 +1476,7 @@ int Adafruit_CC3000_Client::connect(IPAddress destIP, uint16_t destPort)
 
   //printHex((byte *)&socketAddress, sizeof(socketAddress));
   //if (CC3KPrinter != 0) CC3KPrinter->print(F("Connecting socket ... "));
-  if (-1 == ::connect(tcp_socket, &socketAddress, sizeof(socketAddress)))
+  if (-1 == PeripheralIO::connect(tcp_socket, &socketAddress, sizeof(socketAddress)))
   {
     CHECK_PRINTER {
       CC3KPrinter->println(F("Connection error"));
@@ -1682,4 +1685,6 @@ int Adafruit_CC3000_Client::peek(){
 
 void Adafruit_CC3000::setPrinter(Print* p) {
   CC3KPrinter = p;
+}
+
 }

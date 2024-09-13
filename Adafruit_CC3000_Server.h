@@ -27,6 +27,9 @@
 #include "Client.h"
 #include "Server.h"
 
+namespace PeripheralIO
+{
+
 // Assume 4 sockets available, 1 of which is used for listening, so at most 3 
 // clients can be connected at once.
 #define MAX_SERVER_CLIENTS 3 
@@ -113,5 +116,7 @@ private:
   // Accept new connections and update the connected clients.
   bool acceptNewConnections();
 };
+
+}
 
 #endif

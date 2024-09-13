@@ -49,6 +49,9 @@
 #include <Arduino.h>
 #include "data_types.h"
 
+namespace PeripheralIO
+{
+
 //*****************************************************************************
 //
 // If building with a C++ compiler, make all of the definitions in this header
@@ -355,6 +358,8 @@ INT32 netapp_set_debug_level(UINT32 ulLevel);
 // Define reference to CC3k debug printer object.
 // Noted 12-12-2014 by tdicola
 extern Print* CC3KPrinter;
+
+}
 
 #endif	// __NETAPP_H__
 

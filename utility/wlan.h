@@ -53,6 +53,9 @@ products from Adafruit!
 
 #include "cc3000_common.h"
 
+namespace PeripheralIO
+{
+
 //*****************************************************************************
 //
 // If building with a C++ compiler, make all of the definitions in this header
@@ -540,5 +543,7 @@ extern INT32 wlan_smart_config_process(void);
 #ifdef	__cplusplus
 }
 #endif // __cplusplus
+
+}
 
 #endif	// __WLAN_H__
