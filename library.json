@@ -7,7 +7,7 @@
         "type": "git",
         "url": "https://github.com/johnmgreenwell/cc3000"
     },
-    "license": "MIT",
+    "license": "GPL-3.0",
     "frameworks": "*",
     "platforms": "*",
     "build": {
